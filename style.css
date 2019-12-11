@@ -9,9 +9,9 @@ body {
 
 
 img {
-	height: auto;
+    height: auto;
     padding: 0;
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 55%;
 }
