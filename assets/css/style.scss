@@ -1041,19 +1041,40 @@ header {
     }
 }
 
+.logo_v2 {
+    img {
+        @media (max-width:768px) {
+            max-height: 20px;
+        }
+    }
+}
+
 .list {
     margin-top: 54px;
+
+    @media (max-width:768px) {
+        margin-top: 20px;
+    }
 
     &_each {
         color: #000;
         font-size: 20px;
         font-weight: 600;
         line-height: 30px;
+
+        @media (max-width:768px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }
 
 .content {
     padding: 80px 0;
+
+    @media (max-width:768px) {
+        padding: 50px 20px;
+    }
 }
 
 .owl-theme .owl-dots {
