@@ -7,8 +7,10 @@
     <title>Factri</title>
 
     <!-- OwlCarousel -->
-    <link rel='stylesheet'
-        href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css'>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Style -->
@@ -32,19 +34,19 @@
         <div class="navbar_hamburger_menu">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="index.html" class="active">
                         <span>Home</span>
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="about.html">
                         <span>About</span>
                         <span>About</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="contact.html">
                         <span>Contact</span>
                         <span>Contact</span>
                     </a>
@@ -56,15 +58,19 @@
     <main>
         <div class="home">
             <section>
-                <div class="video_sec">
-                    <video width="320" height="240" muted autoplay loop>
-                        <source src="assets/videos/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video_sec_info white_text">
-                        <div class="subtitle">Come Experience
+                <div class="video_sec scrollme">
+                    <div class="video_sec--video animateme" data-when="span" data-from="0" data-to="1" data-easing="linear"
+                        data-scale="1.35">
+                        <video width="320" height="240" muted autoplay loop>
+                            <source src="assets/videos/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video_sec_info white_text animateme" data-when="span" data-from="0" data-to="1"
+                        data-easing="linear" data-translateY="-200">
+                        <div class="subtitle" data-aos="fade-in">Come Experience
                             the Future</div>
-                        <a href="" class="primary_btn">GET IN TOUCH</a>
+                        <a href="" class="primary_btn" data-aos="fade-in">GET IN TOUCH</a>
                     </div>
                 </div>
             </section>
@@ -73,8 +79,9 @@
                 <div class="dark_bg">
                     <div class="container">
                         <div class="block_v1">
-                            <div class="main_title white_text">A Smart Assistant for your Smart Factory!</div>
-                            <div class="text_center">
+                            <div class="main_title white_text" data-aos="fade-in">A Smart Assistant for your Smart
+                                Factory!</div>
+                            <div class="text_center" data-aos="fade-in">
                                 <a href="" class="primary_btn">LEARN MORE</a>
                             </div>
                         </div>
@@ -87,15 +94,15 @@
                     <div class="container">
                         <div class="grid cols_2">
                             <div class="grid_each">
-                                <div class="logo_v2">
+                                <div class="logo_v2" data-aos="fade-in">
                                     <img src="assets/images/logo-2.svg" alt="">
                                 </div>
                             </div>
                             <div class="grid_each">
-                                <div class="subtitle">
+                                <div class="subtitle" data-aos="fade-in">
                                     DataWiz makes your factory smarter!
                                 </div>
-                                <div class="list">
+                                <div class="list" data-aos="fade-in">
                                     <div class="list_each">
                                         — Realtime visibility
                                     </div>
@@ -109,10 +116,362 @@
                 </div>
             </section>
 
+
+
+            <section>
+
+            </section>
+
+
+            <section>
+                <div class="video_center" data-aos="fade-in">
+                    <div class="video_center_inner">
+                        <div class="case_carousel_each">
+                            <div class="case_carousel_each--video">
+                                <video width="320" height="240">
+                                    <source src="assets/videos/video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="case_carousel_each_info">
+                                <div class="case_carousel_each_info_top">
+                                    &nbsp;
+                                </div>
+                                <div class="case_carousel_each_info_btm">
+                                    <span class="play">
+                                        <img src="assets/images/play.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dark_bg">
+                    <div class="container">
+                        <div class="content">
+                            <div class="grid cols_2">
+                                <div class="grid_each">
+                                    <div class="subtitle2 max_width500 white_text_v2" data-aos="fade-in">
+                                        DataWiz is a no-code / low-code Industry 4.0 platform that
+                                        simplifies the process of data capture to decision making for manufacturing
+                                        organizations.
+                                    </div>
+                                </div>
+                                <div class="grid_each">
+                                    <div class="subtext2 max_width400 white_text_v2" data-aos="fade-in">
+                                        DataWiz allows users to capture, connect and access various types of factory
+                                        data on
+                                        one common platform enabling cross-functional analytics and AI/ML driven
+                                        manufacturing intelligence.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="title white_text_v2 max_width980" data-aos="fade-in">
+                                Digitize, Visualize & Analyze any type of factory data
+                                in real time
+                            </div>
+                            <div class="cus_tabs">
+                                <!-- Tabs -->
+                                <div class="cus_tabs_flex" data-aos="fade-in">
+                                    <div class="cus_tabs_list">
+                                        <a href="#" class="tab active" data-toggle-target=".tab-content-1">Last Mile
+                                            Data Capture</a>
+                                        <a href="#" class="tab" data-toggle-target=".tab-content-2">Data Management
+                                            & Integrations</a>
+                                        <a href="#" class="tab" data-toggle-target=".tab-content-3">AI Driven Reporting
+                                            & Analytics</a>
+                                    </div>
+                                    <div class="mob_hide">
+                                        <a href="" class="primary_btn">GET IN TOUCH</a>
+                                    </div>
+                                </div>
+                                <div class="" data-aos="fade-in">
+                                    <!-- Content -->
+                                    <div class="tab-content tab-content-1 active">
+                                        <div class="tab-content-img">
+                                            <img src="assets/images/tab.png" alt="">
+                                        </div>
+                                        <div class="tab-content-text">
+                                            <div class="subtitle2 white_text_v2 max_width500">Our out-of-the-box mobile
+                                                app
+                                                allows factory users to capture and add
+                                                context to any type of factory data directly at source.</div>
+                                            <div class="subtext2 white_text_v2 max_width500">It supports multiple
+                                                methods of
+                                                contactless data capture such as NFC, QR,
+                                                Barcode and Face ID making it the most flexible and easy way for
+                                                factories
+                                                to go completely paperless at every stage of production.</div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content tab-content-2">
+                                        <div class="tab-content-img">
+                                            <img src="assets/images/tab.png" alt="">
+                                        </div>
+                                        <div class="tab-content-text">
+                                            <div class="subtitle2 white_text_v2 max_width500">Our out-of-the-box mobile
+                                                app
+                                                allows factory users to capture and add</div>
+                                            <div class="subtext2 white_text_v2 max_width500">It supports multiple
+                                                methods of
+                                                contactless data capture such as NFC, QR,
+                                                Barcode and Face ID making it the most flexible and easy way for
+                                                factories
+                                                .</div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content tab-content-3">
+                                        <div class="tab-content-img">
+                                            <img src="assets/images/tab.png" alt="">
+                                        </div>
+                                        <div class="tab-content-text">
+                                            <div class="subtitle2 white_text_v2 max_width500">Our out-of-the-box mobile
+                                                app
+                                                allows factory users to capture and add
+                                                context to any type of.</div>
+                                            <div class="subtext2 white_text_v2 max_width500">It supports multiple
+                                                methods of
+                                                contactless data capture such as NFC, QR,
+                                                Barcode and Face ID making it the most flexible and easy way for
+                                                factories
+                                                to go completely.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desk_hide">
+                                    <a href="" class="primary_btn">GET IN TOUCH</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- leadership -->
+            <section>
+                <div class="leadership">
+                    <div class="container">
+                        <div class="title black_text_v2" data-aos="fade-in">
+                            Recognition <br>
+                            & Thought Leadership
+                        </div>
+                        <div class="leadership_carousel" data-aos="fade-in">
+                            <div class="owl-carousel owl-theme">
+                                <div class="leadership_carousel_each">
+                                    <div class="leadership_carousel_each_info">
+                                        <div class="leadership_carousel_each_info--text">
+                                            Awarded as <b>'Top Startup'</b> at <b>CII's Annual Startup Summit</b> in
+                                            the
+                                            category of
+                                            'Digitisation' organised by Confederation of Indian Industry.
+                                        </div>
+                                        <div class="leadership_carousel_each_info--img">
+                                            <img src="assets/images/leadership/1.png" class="one" alt="">
+                                            <img src="assets/images/leadership/2.png" class="two" alt="">
+                                            <img src="assets/images/leadership/3.png" class="three" alt="">
+                                            <img src="assets/images/leadership/4.png" class="four" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="leadership_carousel_each">
+                                    <div class="leadership_carousel_each_info">
+                                        <div class="leadership_carousel_each_info--text">
+                                            Awarded as <b>'Top Startup'</b> at <b>CII's Annual Startup Summit</b> in
+                                            the
+                                            category of
+                                            'Digitisation' organised by Confederation of Indian Industry.
+                                        </div>
+                                        <div class="leadership_carousel_each_info--img">
+                                            <img src="assets/images/leadership/1.png" class="one" alt="">
+                                            <img src="assets/images/leadership/2.png" class="two" alt="">
+                                            <img src="assets/images/leadership/3.png" class="three" alt="">
+                                            <img src="assets/images/leadership/4.png" class="four" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- testimonials -->
+            <div class="full_width_container">
+                <div class="testimonials">
+                    <div class="team_carousel" data-aos="fade-in">
+                        <div class="owl-carousel owl-theme">
+                            <div class="team_carousel_each">
+                                <div class="testimonials_each">
+                                    <div class="testimonials_each--title">
+                                        “One of a kind in the manufacturing industry. I have worked for 22 years and
+                                        always wanted to have this type of tool.”
+                                    </div>
+                                    <div class="testimonials_each--profile">
+                                        <img src="assets/images/profile-2.png" alt="">
+                                    </div>
+                                    <div class="testimonials_each--info">
+                                        <span class="name">Raghuram Penukonda</span>
+                                        <span class="position">Kyukuto Satrac</span>
+                                    </div>
+                                    <div class="testimonials_each--text">
+                                        Datawiz user since April 2022
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team_carousel_each">
+                                <div class="testimonials_each">
+                                    <div class="testimonials_each--title">
+                                        “One of a kind in the manufacturing industry. I have worked for 22 years and
+                                        always wanted to have this type of tool.”
+                                    </div>
+                                    <div class="testimonials_each--profile">
+                                        <img src="assets/images/profile-2.png" alt="">
+                                    </div>
+                                    <div class="testimonials_each--info">
+                                        <span class="name">Raghuram Penukonda</span>
+                                        <span class="position">Kyukuto Satrac</span>
+                                    </div>
+                                    <div class="testimonials_each--text">
+                                        Datawiz user since April 2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- case studies -->
+            <section>
+                <div class="content dark_bg pb-0">
+                    <div class="container">
+                        <div class="title white_text_v2" data-aos="fade-in">Case Studies, <br> Clients & Partners</div>
+                    </div>
+                    <div class="case_carousel" data-aos="fade-in">
+                        <div class="owl-carousel owl-theme">
+                            <div class="case_carousel_each">
+                                <div class="case_carousel_each--video">
+                                    <video width="320" height="240">
+                                        <source src="assets/videos/video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="case_carousel_each_info">
+                                    <div class="case_carousel_each_info_top">
+                                        <span class="name">DEVGIRI</span>
+                                        <span class="text">Journey with <b>DataWiz</b></span>
+                                    </div>
+                                    <div class="case_carousel_each_info_btm">
+                                        <span class="play">
+                                            <img src="assets/images/play.svg" alt="">
+                                        </span>
+                                        <span class="logoby">
+                                            <img src="assets/images/datawiz-logo.svg" alt="">
+                                            <span>
+                                                By <b>Factri.Ai</b>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case_carousel_each">
+                                <div class="case_carousel_each--video">
+                                    <video width="320" height="240">
+                                        <source src="assets/videos/video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="case_carousel_each_info">
+                                    <div class="case_carousel_each_info_top">
+                                        <span class="name">DEVGIRI</span>
+                                        <span class="text">Journey with <b>DataWiz</b></span>
+                                    </div>
+                                    <div class="case_carousel_each_info_btm">
+                                        <span class="play">
+                                            <img src="assets/images/play.svg" alt="">
+                                        </span>
+                                        <span class="logoby">
+                                            <img src="assets/images/datawiz-logo.svg" alt="">
+                                            <span>
+                                                By <b>Factri.Ai</b>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="case_carousel_each">
+                                <div class="case_carousel_each--video">
+                                    <video width="320" height="240">
+                                        <source src="assets/videos/video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="case_carousel_each_info">
+                                    <div class="case_carousel_each_info_top">
+                                        <span class="name">DEVGIRI</span>
+                                        <span class="text">Journey with <b>DataWiz</b></span>
+                                    </div>
+                                    <div class="case_carousel_each_info_btm">
+                                        <span class="play">
+                                            <img src="assets/images/play.svg" alt="">
+                                        </span>
+                                        <span class="logoby">
+                                            <img src="assets/images/datawiz-logo.svg" alt="">
+                                            <span>
+                                                By <b>Factri.Ai</b>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- logos -->
+            <section>
+                <div class="logos">
+                    <div class="container">
+                        <div class="logos_carousel" data-reverse="false" data-aos="fade-in">
+                            <div class="owl-carousel owl-theme">
+                                <div class="logos_carousel_each">
+                                    <img src="assets/images/logos/1.png" alt="">
+                                </div>
+                                <div class="logos_carousel_each">
+                                    <img src="assets/images/logos/2.png" alt="">
+                                </div>
+                                <div class="logos_carousel_each">
+                                    <img src="assets/images/logos/3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="logos_carousel" data-reverse="true" data-aos="fade-in">
+                            <div class="owl-carousel owl-theme">
+                                <div class="logos_carousel_each">
+                                    <img src="assets/images/logos/4.png" alt="">
+                                </div>
+                                <div class="logos_carousel_each">
+                                    <img src="assets/images/logos/5.png" alt="">
+                                </div>
+                                <div class="logos_carousel_each">
+                                    <img src="assets/images/logos/6.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- get in touch -->
             <section>
                 <div class="container">
-                    <div class="get_in_touch">
+                    <div class="get_in_touch" data-aos="fade-in">
                         <div class="title white_text text_center">
                             Come Experience <br>
                             the Future
@@ -125,7 +484,7 @@
             </section>
 
             <!-- footer -->
-            <div class="footer">
+            <div class="footer" data-aos="fade-in">
                 <div class="container">
                     <div class="footer_inner">
                         © 2023 by Factri.Ai | All rights reserved

@@ -1,25 +1,11 @@
 // AOS
 // below listed default settings
 AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: 'aos-init', // class applied after initialization
-    animatedClassName: 'aos-animate', // class applied on animation
-    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 20, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 800, // values from 0 to 3000, with step 50ms
-    easing: 'ease-in-out', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: false,
+    offset: 0,
+    startEvent: 'load',
 });
 
 // navbar
@@ -78,7 +64,6 @@ function moveBackground() {
 $(window).on('mousemove click', function (e) {
 
     var isHovered = $('.animate-this:hover').length > 0;
-    console.log(isHovered);
 
     //if(!$(e.target).hasClass('animate-this')) {
     if (!isHovered) {
@@ -91,6 +76,14 @@ $(window).on('mousemove click', function (e) {
 });
 
 moveBackground();
+
+// tabs
+$('.tab').on('click', function (evt) {
+    evt.preventDefault();
+    $(this).addClass('active').siblings().removeClass('active');
+    var sel = this.getAttribute('data-toggle-target');
+    $('.tab-content').removeClass('active').filter(sel).addClass('active');
+});
 
 // window load
 $(window).on('load', function () {
@@ -115,6 +108,97 @@ $(window).on('load', function () {
                 items: 1,
                 margin: 64,
                 stagePadding: 150
+            }
+        }
+    })
+
+    // logos carousel
+    $('.logos_carousel .owl-carousel').each(function () {
+        var _rtlSet = ($(this).parent().attr('data-reverse') === 'true') ? true : false;
+
+        $(this).owlCarousel({
+            loop: true,
+            nav: false,
+            dots: false,
+            smartSpeed: 800,
+            margin: 32,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplayTimeout: 2800,
+            autoplaySpeed: 2800,
+            // autoplayHoverPause: true,
+            rtl: _rtlSet,
+            responsive: {
+                320: {
+                    items: 2,
+                    margin: 10,
+                },
+                768: {
+                    items: 3,
+                    margin: 60,
+                }
+            }
+        })
+    })
+
+
+    // case studies carousel
+    $('.case_carousel_each_info_btm .play').on('click', function () {
+        $(this).parents('.case_carousel_each').find('video').trigger('play');
+        $(this).parents('.case_carousel_each').find('video').attr('controls', true);
+        $(this).parents('.case_carousel_each').addClass('playing');
+        $(this).parents('.case_carousel_each').find('video').on('ended pause', function () {
+            $(this).parents('.case_carousel_each').find('video').attr('controls', false);
+            $(this).parents('.case_carousel_each').removeClass('playing');
+        });
+    })
+
+    var caseOwl = $('.case_carousel .owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        smartSpeed: 800,
+        margin: 32,
+        center: true,
+        responsive: {
+            320: {
+                items: 1,
+                margin: 10,
+                center: false,
+                stagePadding: 20
+            },
+            768: {
+                items: 1,
+                margin: 64,
+                stagePadding: 350
+            }
+        }
+    })
+
+    caseOwl.on('changed.owl.carousel', function (event) {
+        $(this).find('video').trigger('pause');
+        $(this).find('video').attr('controls', false);
+        $(this).find('.case_carousel_each').removeClass('playing');
+    })
+
+
+    // leadership carousel
+    $('.leadership_carousel .owl-carousel').owlCarousel({
+        loop: false,
+        nav: false,
+        dots: true,
+        smartSpeed: 800,
+        margin: 32,
+        center: true,
+        responsive: {
+            320: {
+                items: 1,
+                margin: 10,
+                center: false,
+            },
+            768: {
+                items: 1,
+                margin: 64,
             }
         }
     })
