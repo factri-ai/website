@@ -1254,7 +1254,7 @@ header .navbar_hamburger_menu ul li a:hover span:last-child {
 }
 @media (max-width: 768px) {
   .testimonials {
-    padding: 0 20px;
+    padding: 0 20px 20px;
     overflow: hidden;
   }
 }

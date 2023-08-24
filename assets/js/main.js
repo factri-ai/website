@@ -34,8 +34,10 @@ function fullWidthContainer() {
         _actualWidth = (_windowWidth - _containerWidth) / 2;
     $('.full_width_container').css(
         { 'padding-left': _actualWidth }
-    )
-
+    );
+    $('.full_width_container .owl-theme .owl-dots').css(
+        { 'padding-right': _actualWidth / 2 }
+    );
 }
 
 // move background
@@ -87,7 +89,9 @@ $('.tab').on('click', function (evt) {
 
 // window load
 $(window).on('load', function () {
-    fullWidthContainer();
+    setTimeout(function () {
+        fullWidthContainer();
+    }, 300)
 
     // team carousel
     $('.team_carousel .owl-carousel').owlCarousel({
