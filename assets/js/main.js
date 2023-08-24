@@ -35,9 +35,6 @@ function fullWidthContainer() {
     $('.full_width_container').css(
         { 'padding-left': _actualWidth }
     );
-    $('.full_width_container .owl-theme .owl-dots').css(
-        { 'padding-right': _actualWidth / 2 }
-    );
 }
 
 // move background
@@ -128,8 +125,8 @@ $(window).on('load', function () {
             margin: 32,
             autoplay: true,
             slideTransition: 'linear',
-            autoplayTimeout: 2800,
-            autoplaySpeed: 2800,
+            autoplayTimeout: 3800,
+            autoplaySpeed: 3800,
             // autoplayHoverPause: true,
             rtl: _rtlSet,
             responsive: {

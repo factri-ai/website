@@ -331,7 +331,7 @@ header {
                     padding-left: 0;
                     display: inline-flex;
                     flex-direction: column;
-                    gap: 60px;
+                    gap: 80px;
 
                     @media (max-width:768px) {
                         gap: 40px;
@@ -342,10 +342,14 @@ header {
                         a {
                             text-decoration: none;
                             color: #fff;
-                            font-size: 56px;
+                            font-size: 96px;
                             font-weight: 600;
                             position: relative;
                             display: inline-flex;
+
+                            @media (max-width:768px) {
+                                font-size: 36px;
+                            }
 
                             &.active {
                                 color: #36C5FE;
@@ -373,9 +377,6 @@ header {
                                 }
                             }
 
-                            @media (max-width:768px) {
-                                font-size: 36px;
-                            }
                         }
                     }
                 }
@@ -459,11 +460,29 @@ header {
     position: relative;
     overflow: hidden;
 
+    &_content {
+        position: relative;
+        z-index: 1;
+    }
+
+
     &_bg_img {
-        img {
+
+        &::before {
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(212deg, rgba(0, 0, 0, 0.00) 53.54%, rgba(0, 0, 0, 0.70) 100%), linear-gradient(180deg, #000 31.25%, rgba(0, 0, 0, 0.00) 100%);
+            transform: rotate(180deg);
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: auto;
             object-fit: cover;
             object-position: top;
             z-index: -1;
@@ -556,7 +575,7 @@ header {
     }
 
     .four {
-        left: 0%;
+        left: -4%;
         top: 35%;
     }
 
@@ -567,7 +586,7 @@ header {
 
     .six {
         top: 35%;
-        right: 0%;
+        right: -4%;
     }
 
     .seven {
@@ -587,17 +606,17 @@ header {
 
     .ten {
         top: 56%;
-        left: 0%;
+        left: -2%;
     }
 
     .eleven {
         top: 56%;
-        right: 0%;
+        right: -4%;
     }
 
     .twelve {
         bottom: 10%;
-        left: 0%;
+        left: -2%;
     }
 
     &::before {
@@ -718,6 +737,16 @@ header {
             max-width: 1120px;
         }
 
+        .owl-item.active {
+            .team_info_head {
+                transform: scale(1) translateY(0);
+            }
+
+            .team_info_grid {
+                transform: scale(1) translateY(0);
+            }
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -750,6 +779,8 @@ header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 40px;
+            transform: scale(0.95) translateY(-20px);
+            transition: 0.3s linear 0.65s;
 
             @media (max-width:768px) {
                 align-items: center;
@@ -789,6 +820,8 @@ header {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 100px;
+            transform: scale(0.95) translateY(20px);
+            transition: 0.3s linear 0.65s;
 
             @media (max-width:768px) {
                 grid-template-columns: 1fr;
@@ -875,12 +908,26 @@ header {
     padding: 128px 64px 32px;
     position: relative;
     overflow: hidden;
+    background: #000;
+    z-index: 1;
 
     &_bg_img {
-        img {
+
+        &::before {
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(212deg, rgba(0, 0, 0, 0.00) 53.54%, rgba(0, 0, 0, 0.70) 100%), linear-gradient(180deg, #000 31.25%, rgba(0, 0, 0, 0.00) 100%);
+            transform: rotate(180deg);
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 70%;
             object-fit: cover;
             object-position: top;
             z-index: -1;
@@ -1186,11 +1233,19 @@ header {
         }
 
         &_each {
+            filter: grayscale(100);
+            transition: 0.3s linear;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+
             img {
                 max-width: 100%;
                 width: auto !important;
                 display: block;
                 margin: 0 auto;
+                max-height: 50px;
 
                 @media (max-width:768px) {
                     max-height: 30px;
@@ -1213,7 +1268,10 @@ header {
             .one,
             .two,
             .three,
-            .four {
+            .four,
+            .five,
+            .six,
+            .seven {
                 opacity: 1;
                 transform: translate(0, 0);
             }
@@ -1247,8 +1305,8 @@ header {
             }
 
             &_info {
-                max-width: 420px;
-                height: 420px;
+                max-width: 440px;
+                height: 440px;
                 margin: 0 auto;
 
                 @media (max-width:768px) {
@@ -1291,7 +1349,7 @@ header {
                             left: 0;
                             bottom: 25%;
                             transform: translate(5px, 5px);
-                            transition: 0.5s linear 0.85s;
+                            transition: 0.5s linear 0.75s;
 
                             @media (max-width:768px) {
                                 left: auto;
@@ -1301,9 +1359,9 @@ header {
                         }
 
                         &.two {
-                            bottom: 0;
+                            bottom: 3%;
                             left: 12%;
-                            transition: 0.5s linear 0.9s;
+                            transition: 0.5s linear 0.75s;
                             transform: translate(-5px, -5px);
 
                             @media (max-width:768px) {
@@ -1315,8 +1373,8 @@ header {
                         &.three {
                             top: 0px;
                             right: 10%;
-                            z-index: -1;
-                            transition: 0.5s linear 0.95s;
+                            // z-index: -1;
+                            transition: 0.5s linear 0.8s;
                             transform: translate(5px, 5px);
 
                             @media (max-width:768px) {
@@ -1328,8 +1386,42 @@ header {
                         &.four {
                             bottom: 0;
                             right: 0px;
-                            transition: 0.5s linear 1s;
+                            transition: 0.5s linear 0.8s;
                             transform: translate(5px, 5px);
+                        }
+
+                        &.five {
+                            bottom: 0;
+                            right: 20%;
+                            transition: 0.5s linear 0.85s;
+                            transform: translate(5px, 5px);
+                        }
+
+                        &.six {
+                            top: 0;
+                            left: 12%;
+                            transition: 0.5s linear 0.85s;
+                            transform: translate(-5px, -5px);
+                            z-index: -1;
+
+                            @media (max-width:768px) {
+                                left: 0;
+                                top: 5%;
+                            }
+                        }
+
+                        &.seven {
+                            bottom: 32%;
+                            right: 10%;
+                            transition: 0.5s linear 0.8s;
+                            transform: translate(5px, 5px);
+                            z-index: -1;
+
+                            @media (max-width:768px) {
+                                bottom: 20%;
+                                right: 4%;
+                                z-index: 1;
+                            }
                         }
                     }
                 }
@@ -1345,6 +1437,17 @@ header {
     @media (max-width:768px) {
         padding: 0 20px 20px;
         overflow: hidden;
+    }
+
+    .owl-item.active {
+
+        .testimonials_each--title,
+        .testimonials_each--info,
+        .testimonials_each--text,
+        .testimonials_each--profile {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
     &_each {
@@ -1365,6 +1468,9 @@ header {
             line-height: 50px;
             max-width: 850px;
             margin: 0 auto;
+            // opacity: 0;
+            transform: scale(0.65);
+            transition: 0.35s linear 0.65s;
 
             @media (max-width:768px) {
                 font-size: 18px;
@@ -1374,6 +1480,9 @@ header {
 
         &--profile {
             margin-top: 50px;
+            transform: scale(0.65);
+            // opacity: 0;
+            transition: 0.35s linear 0.7s;
 
             @media (max-width:768px) {
                 margin-top: 25px;
@@ -1394,6 +1503,9 @@ header {
             line-height: 24px;
             margin-top: 38px;
             text-align: center;
+            // opacity: 0;
+            transform: scale(0.65);
+            transition: 0.35s linear 0.75s;
 
             @media (max-width:768px) {
                 margin-top: 18px;
@@ -1417,6 +1529,9 @@ header {
             font-weight: 400;
             line-height: 22px;
             margin-top: 26px;
+            // opacity: 0;
+            transform: scale(0.65);
+            transition: 0.35s linear 0.8s;
 
             @media (max-width:768px) {
                 margin-top: 12px;
@@ -1468,8 +1583,8 @@ header {
             left: 0;
             top: 0;
             position: absolute;
-            opacity: 1;
             transition: 0.35s cubic-bezier(0.215, 0.610, 0.355, 1);
+            opacity: .65;
         }
 
         &.playing {
@@ -1626,6 +1741,18 @@ header {
     }
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .cus_tabs {
 
     .primary_btn {
@@ -1687,7 +1814,7 @@ header {
 
         &.active {
             display: block;
-            animation: fadeIn 0.45s cubic-bezier(0.215, 0.610, 0.355, 1);
+            animation: fadeInUp 0.75s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
 
         &-img {

@@ -62,7 +62,7 @@
 
 
             <section>
-                <div class="about_kma">
+                <div class="about_kma scrollme">
                     <div class="employees">
                         <img src="assets/images/employees/1.png" class="poa animate-this one" alt="">
                         <img src="assets/images/employees/2.png" class="poa animate-this two" alt="">
@@ -78,7 +78,8 @@
                         <img src="assets/images/employees/12.png" class="poa animate-this twelve" alt="">
                     </div>
                     <div class="container">
-                        <div class="main_title text-focus-in">
+                        <div class="main_title text-focus-in animateme" data-when="span" data-from="0" data-to="1"
+                        data-easing="linear" data-translateY="-400">
                             Empowering the lives of thousands of manufacturing employees
                         </div>
                         <div class="grid cols_2">
@@ -109,47 +110,51 @@
             <section>
                 <div class="features scrollme">
                     <div class="features_bg_img">
-                        <img src="assets/images/about.png" class="animateme" alt="" data-when="span" data-from="0"
-                        data-to="1" data-easing="linear" data-scale="1.15" alt="">
+                        <img src="assets/images/about.jpg" class="animateme" alt="" data-when="span" data-from="0"
+                            data-to="1" data-easing="linear" data-scale="1.15" alt="">
                     </div>
-                    <div class="container">
-                        <div class="grid cols_2">
-                            <div class="grid_each">
-                                <div class="subtitle2 white_text_v2 max_width500" data-aos="fade-in">
-                                    By reducing the barrier for entry for manufacturing companies to digitally
-                                    transform, we are ensuring that Indian manufacturers do not get left behind when it
-                                    comes to adoption of technology and are able to compete globally by playing to
-                                    India’s own unique advantage of a tech enabled workforce.
+                    <div class="features_content">
+                        <div class="container">
+                            <div class="grid cols_2">
+                                <div class="grid_each">
+                                    <div class="subtitle2 white_text_v2 max_width500" data-aos="fade-in">
+                                        By reducing the barrier for entry for manufacturing companies to digitally
+                                        transform, we are ensuring that Indian manufacturers do not get left behind when
+                                        it
+                                        comes to adoption of technology and are able to compete globally by playing to
+                                        India’s own unique advantage of a tech enabled workforce.
+                                    </div>
+                                </div>
+                                <div class="grid_each">
+                                    <div class="subtext white_text_v2 max_width500" data-aos="fade-in">
+                                        By combining human capital with technology and building India-first solutions
+                                        that
+                                        empower rather than replace, we are able to drive tangible productivity benefits
+                                        such as:
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grid_each">
-                                <div class="subtext white_text_v2 max_width500" data-aos="fade-in">
-                                    By combining human capital with technology and building India-first solutions that
-                                    empower rather than replace, we are able to drive tangible productivity benefits
-                                    such as:
+                            <div class="features_list">
+                                <div class="features_list_each" data-aos="fade-in">
+                                    <div class="features_list_each--title">75% less</div>
+                                    <div class="features_list_each--text">Time & effort for NVA admin work</div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="features_list">
-                            <div class="features_list_each" data-aos="fade-in">
-                                <div class="features_list_each--title">75% less</div>
-                                <div class="features_list_each--text">Time & effort for NVA admin work</div>
-                            </div>
-                            <div class="features_list_each" data-aos="fade-in">
-                                <div class="features_list_each--title">10-15%</div>
-                                <div class="features_list_each--text">more Productive time / person / day</div>
-                            </div>
-                            <div class="features_list_each" data-aos="fade-in">
-                                <div class="features_list_each--title">&lt;&lt;1 min</div>
-                                <div class="features_list_each--text">real - time reports & data visibillty</div>
-                            </div>
-                            <div class="features_list_each" data-aos="fade-in">
-                                <div class="features_list_each--title">1-2 Days</div>
-                                <div class="features_list_each--text">reduction in WIP and inventory</div>
-                            </div>
-                            <div class="features_list_each" data-aos="fade-in">
-                                <div class="features_list_each--title">10X</div>
-                                <div class="features_list_each--text">more hidden opportunities</div>
+                                <div class="features_list_each" data-aos="fade-in">
+                                    <div class="features_list_each--title">10-15%</div>
+                                    <div class="features_list_each--text">more Productive time / person / day</div>
+                                </div>
+                                <div class="features_list_each" data-aos="fade-in">
+                                    <div class="features_list_each--title">&lt;&lt;1 min</div>
+                                    <div class="features_list_each--text">real - time reports & data visibillty</div>
+                                </div>
+                                <div class="features_list_each" data-aos="fade-in">
+                                    <div class="features_list_each--title">1-2 Days</div>
+                                    <div class="features_list_each--text">reduction in WIP and inventory</div>
+                                </div>
+                                <div class="features_list_each" data-aos="fade-in">
+                                    <div class="features_list_each--title">10X</div>
+                                    <div class="features_list_each--text">more hidden opportunities</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,7 +193,7 @@
                                                 <span class="name">Hitanjan Sarkar</span>
                                                 <span class="position">Co-Founder & CTO</span>
                                             </div>
-                                            <a href="" class="team_info_head--link">
+                                            <a href="https://www.linkedin.com/in/hitanjan/" target="_blank" class="team_info_head--link">
                                                 <img src="assets/images/linkedin.svg" alt="">
                                             </a>
                                         </div>
@@ -241,51 +246,95 @@
                                     <div class="team_info">
                                         <div class="team_info_head">
                                             <div class="team_info_head_text">
-                                                <span class="name">Hitanjan Sarkar</span>
-                                                <span class="position">Co-Founder & CTO</span>
+                                                <span class="name">Srihari Murthy</span>
+                                                <span class="position">Co-Founder & CEO</span>
                                             </div>
-                                            <a href="" class="team_info_head--link">
+                                            <a href="https://www.linkedin.com/in/sriharimurthy/" target="_blank" class="team_info_head--link">
                                                 <img src="assets/images/linkedin.svg" alt="">
                                             </a>
                                         </div>
                                         <div class="team_info_grid">
                                             <div class="team_info_grid_each">
                                                 <div class="team_info--profile">
-                                                    <img src="assets/images/profile.png" alt="">
+                                                    <img src="assets/images/profile-2.png" alt="">
                                                 </div>
                                                 <div class="team_info--detail">
-                                                    <b>12+ years</b> experience in full stack software development
+                                                    <b>15+ years</b> hands-on experience in manufacturing & technology
                                                 </div>
                                             </div>
                                             <div class="team_info_grid_each">
                                                 <div class="team_info_list">
                                                     <div class="team_info_list_each">
                                                         <div class="team_info_list_each--title">
-                                                            ML Lead
+                                                            Managing Partner
                                                         </div>
                                                         <div class="team_info_list_each--text">
-                                                            - Tekion (founded by Tesla’s ex-CIO)
+                                                            - Stigmergy Solutions <br>
+                                                            (Manufacturing Tech Consultancy)
                                                         </div>
                                                     </div>
                                                     <div class="team_info_list_each">
                                                         <div class="team_info_list_each--title">
-                                                            ML Engineer
+                                                            Manufacturing Engineer
                                                         </div>
                                                         <div class="team_info_list_each--text">
-                                                            - Siftery (sold to G2)
+                                                            - Strata Aerospace
+                                                        </div>
+                                                    </div>
+                                                    <div class="team_info_list_each">
+                                                        <div class="team_info_list_each--text">
+                                                            Mechanical Engineer from VNIT Nagpur
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team_carousel_each">
+                                    <div class="team_info">
+                                        <div class="team_info_head">
+                                            <div class="team_info_head_text">
+                                                <span class="name">Adrian Pinto</span>
+                                                <span class="position">Co-Founder & COO</span>
+                                            </div>
+                                            <a href="https://www.linkedin.com/in/adrianrpinto/" target="_blank" class="team_info_head--link">
+                                                <img src="assets/images/linkedin.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="team_info_grid">
+                                            <div class="team_info_grid_each">
+                                                <div class="team_info--profile">
+                                                    <img src="assets/images/profile-3.png" alt="">
+                                                </div>
+                                                <div class="team_info--detail">
+                                                    <b>13+ years</b> experience leading shop floor digitization
+                                                    initiatives
+                                                </div>
+                                            </div>
+                                            <div class="team_info_grid_each">
+                                                <div class="team_info_list">
+                                                    <div class="team_info_list_each">
+                                                        <div class="team_info_list_each--title">
+                                                            Head of Ops
+                                                        </div>
+                                                        <div class="team_info_list_each--text">
+                                                            - Stigmergy Solutions <br>
+                                                            ( Manufacturing Tech Consultancy )
                                                         </div>
                                                     </div>
                                                     <div class="team_info_list_each">
                                                         <div class="team_info_list_each--title">
-                                                            Software Engineer
+                                                            Manufacturing Engineer
                                                         </div>
                                                         <div class="team_info_list_each--text">
-                                                            - NetIQ
+                                                            - Cummins
                                                         </div>
                                                     </div>
                                                     <div class="team_info_list_each">
                                                         <div class="team_info_list_each--text">
-                                                            Electrical and Communications Engineer from VNIT Nagpur
+                                                            Industrial & Systems Engineer
+                                                            from Virginia Tech, US
                                                         </div>
                                                     </div>
                                                 </div>
