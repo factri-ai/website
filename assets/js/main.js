@@ -159,11 +159,13 @@ $(window).on('load', function () {
         $('.case_modal').addClass('open');
         var _videoSrc = $(this).parents('.case_carousel_each').find('.case_carousel_each--video').attr('data-src');
         $('.case_modal iframe').attr('src', _videoSrc);
+        $('html').css({ 'overflow': 'hidden' })
     })
 
     $('.case_modal .case_modal--close').on('click', function () {
         $('.case_modal').removeClass('open');
         $('.case_modal iframe').attr('src', "");
+        $('html').css({ 'overflow': 'scroll' })
     })
 
     var caseOwl = $('.case_carousel .owl-carousel').owlCarousel({
