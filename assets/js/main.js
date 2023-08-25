@@ -144,14 +144,26 @@ $(window).on('load', function () {
 
 
     // case studies carousel
+
+    // $('.case_carousel_each_info_btm .play').on('click', function () {
+    //     $(this).parents('.case_carousel_each').find('video').trigger('play');
+    //     $(this).parents('.case_carousel_each').find('video').attr('controls', true);
+    //     $(this).parents('.case_carousel_each').addClass('playing');
+    //     $(this).parents('.case_carousel_each').find('video').on('ended pause', function () {
+    //         $(this).parents('.case_carousel_each').find('video').attr('controls', false);
+    //         $(this).parents('.case_carousel_each').removeClass('playing');
+    //     });
+    // })
+
     $('.case_carousel_each_info_btm .play').on('click', function () {
-        $(this).parents('.case_carousel_each').find('video').trigger('play');
-        $(this).parents('.case_carousel_each').find('video').attr('controls', true);
-        $(this).parents('.case_carousel_each').addClass('playing');
-        $(this).parents('.case_carousel_each').find('video').on('ended pause', function () {
-            $(this).parents('.case_carousel_each').find('video').attr('controls', false);
-            $(this).parents('.case_carousel_each').removeClass('playing');
-        });
+        $('.case_modal').addClass('open');
+        var _videoSrc = $(this).parents('.case_carousel_each').find('.case_carousel_each--video').attr('data-src');
+        $('.case_modal iframe').attr('src', _videoSrc);
+    })
+
+    $('.case_modal .case_modal--close').on('click', function () {
+        $('.case_modal').removeClass('open');
+        $('.case_modal iframe').attr('src', "");
     })
 
     var caseOwl = $('.case_carousel .owl-carousel').owlCarousel({
