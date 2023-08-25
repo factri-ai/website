@@ -453,6 +453,11 @@ header .navbar_hamburger_menu ul li a:hover span:last-child {
   top: 0;
 }
 @media (max-width: 768px) {
+  .features_bg_img img {
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
   .features {
     padding: 80px 20px;
   }
@@ -506,6 +511,16 @@ header .navbar_hamburger_menu ul li a:hover span:last-child {
 @media (max-width: 768px) {
   .about_kma {
     padding: 120px 20px 80px;
+  }
+}
+@media (max-width: 768px) {
+  .about_kma .employees {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-50px);
   }
 }
 .about_kma .poa {
@@ -579,8 +594,14 @@ header .navbar_hamburger_menu ul li a:hover span:last-child {
   filter: blur(112px);
   transform: translateY(-50%);
 }
-.about_kma .main_title {
-  margin-bottom: 400px;
+.about_kma_fold {
+  height: calc(100vh - 130px);
+}
+@media (max-width: 768px) {
+  .about_kma_fold {
+    display: flex;
+    align-items: center;
+  }
 }
 @media (max-width: 768px) {
   .about_kma .main_title {
@@ -684,6 +705,16 @@ header .navbar_hamburger_menu ul li a:hover span:last-child {
 .team_carousel_each {
   max-width: 1120px;
 }
+@media (max-width: 768px) {
+  .team_carousel_each {
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .team_carousel .owl-stage {
+    display: flex;
+  }
+}
 .team_carousel .owl-item.active .team_info_head {
   transform: scale(1) translateY(0);
 }
@@ -714,6 +745,7 @@ header .navbar_hamburger_menu ul li a:hover span:last-child {
   .team_info {
     padding: 25px;
     border-radius: 10px;
+    height: 100%;
   }
 }
 .team_info_head {

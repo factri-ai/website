@@ -488,6 +488,10 @@ header {
             z-index: -1;
             left: 0;
             top: 0;
+
+            @media (max-width:768px) {
+                height: 100%;
+            }
         }
     }
 
@@ -546,6 +550,17 @@ header {
 
     @media (max-width:768px) {
         padding: 120px 20px 80px;
+    }
+
+    .employees {
+        @media (max-width:768px) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translateY(-50px);
+        }
     }
 
     .poa {
@@ -632,8 +647,16 @@ header {
         transform: translateY(-50%);
     }
 
+    &_fold {
+        height: calc(100vh - 130px);
+
+        @media (max-width:768px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
     .main_title {
-        margin-bottom: 400px;
 
         @media (max-width:768px) {
             margin-bottom: 60px;
@@ -735,6 +758,16 @@ header {
 
         &_each {
             max-width: 1120px;
+
+            @media (max-width:768px) {
+                height: 100%;
+            }
+        }
+
+        .owl-stage {
+            @media (max-width:768px) {
+                display: flex;
+            }
         }
 
         .owl-item.active {
@@ -773,6 +806,7 @@ header {
         @media (max-width:768px) {
             padding: 25px;
             border-radius: 10px;
+            height: 100%;
         }
 
         &_head {
