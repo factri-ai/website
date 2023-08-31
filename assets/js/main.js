@@ -217,11 +217,4 @@ $(window).on('load', function () {
             }
         }
     })
-
-    // form
-    $('.contact_form button.primary_btn').on('click', function (e) {
-        setTimeout(function () {
-            $('.contact_form input, .contact_form textarea,.contact_form select').val('');
-        }, 300)
-    })
 })

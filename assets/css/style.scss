@@ -938,6 +938,21 @@ header {
     }
 }
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .contact {
     padding: 128px 64px 32px;
     position: relative;
@@ -981,6 +996,39 @@ header {
 
         @media (max-width:768px) {
             padding: 32px 20px;
+        }
+
+        .primary_btn {
+            position: relative;
+
+            .loader {
+                width: 18px;
+                height: 18px;
+                border: 2px solid #36C5FE;
+                border-bottom-color: transparent;
+                border-radius: 50%;
+                display: inline-block;
+                box-sizing: border-box;
+                animation: rotation 1s linear infinite;
+                position: absolute;
+                right: 20px;
+                opacity: 0;
+                transition: 0.25s linear;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         &--title {
@@ -1045,6 +1093,7 @@ header {
                     border-bottom: 1px solid #F0F0F0;
                     outline: none;
                     width: 100%;
+
 
                     &::placeholder {
                         color: #FFF;
@@ -1989,5 +2038,21 @@ header {
         @media (max-width:768px) {
             min-width: 90vw;
         }
+    }
+}
+
+.thank_you {
+    color: #fff;
+    font-size: 12px;
+    border: rgba($color: #fff, $alpha: .15) 1px solid;
+    border-radius: 4px;
+    padding: 12px;
+    background: linear-gradient(199deg, #3884A5 0%, #123D6C 55.69%);
+    text-align: center;
+    display: none;
+
+    &.active {
+        display: block;
+        animation: fadeInUp 0.75s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
 }
