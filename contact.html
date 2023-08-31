@@ -85,13 +85,13 @@
                             <input type="text" name="company" required placeholder="Company">
                         </div>
                         <div class="form_group">
-                            <select name="" id="" required name="select">
+                            <select name="" id="" required name="messagetype">
                                 <option value="">Select an option that best describes what you are looking for</option>
-                                <option value="">Want to try DataWiz in my factory</option>
-                                <option value="">Need more info for a future requirement</option>
-                                <option value="">Just doing a bit of research</option>
-                                <option value="">Looking for a job</option>
-                                <option value="">Looking to collaborate</option>
+                                <option value="Want to try DataWiz in my factory">Want to try DataWiz in my factory</option>
+                                <option value="Need more info for a future requirement">Need more info for a future requirement</option>
+                                <option value="Just doing a bit of research">Just doing a bit of research</option>
+                                <option value="Looking for a job">Looking for a job</option>
+                                <option value="Looking to collaborate">Looking to collaborate</option>
                             </select>
                         </div>
                         <div class="form_group">
@@ -149,7 +149,7 @@
             $('.contact_form .primary_btn .loader').addClass('active');
             axios
                 .post("https://submit-form.com/wAKhGyqX", {
-                    message: "Thank you",
+                    // message: "Thank you",
                 })
                 .then(function (response) {
                     // console.log(response);
