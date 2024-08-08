@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="assets/vendor/aos.css" />
   <!-- Style -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -64,27 +66,26 @@
       <div class="contact_form">
         <div class="contact_form--title" data-aos="fade-in">Get in Touch</div>
         <div class="contact_form_area" data-aos="fade-in">
-          <!-- <form action="https://submit-form.com/wAKhGyqX" method="post" target="_blank"> -->
-          <form class="" id="contact_form">
+          <form id="contact-form" action="https://submit-form.com/wAKhGyqX" method="post">
             <div class="form_group_cols">
               <div class="form_group">
-                <input type="text" required name="first-name" placeholder="First Name">
+                <input id="first-name" type="text" required name="first-name" placeholder="First Name">
               </div>
               <div class="form_group">
-                <input type="text" required name="last-name" placeholder="Last Name">
+                <input id="last-name" type="text" required name="last-name" placeholder="Last Name">
               </div>
             </div>
             <div class="form_group">
-              <input type="text" name="email" required placeholder="Email Id">
+              <input id="email" type="text" name="email" required placeholder="Email Id">
             </div>
             <div class="form_group">
-              <input type="text" name="phone" required placeholder="Phone">
+              <input id="phone" type="text" name="phone" required placeholder="Phone">
             </div>
             <div class="form_group">
-              <input type="text" name="company" required placeholder="Company">
+              <input id="company" type="text" name="company" required placeholder="Company">
             </div>
             <div class="form_group">
-              <select name="" id="" required name="messagetype">
+              <select id="message-type" required name="message-type">
                 <option value="">Select an option that best describes what you are looking for</option>
                 <option value="Want to try DataWiz in my factory">Want to try DataWiz in my factory</option>
                 <option value="Need more info for a future requirement">Need more info for a future requirement</option>
@@ -95,21 +96,16 @@
             </div>
             <div class="form_group">
               <label for="">Tell us more..</label>
-              <textarea name="" name="tell-us" required id="" cols="30" rows="10"></textarea>
+              <textarea id="tell-us" name="tell-us" required cols="30" rows="10"></textarea>
             </div>
-            <div class="form_group_cols">
-              <div class="form_group">
-                <!-- recaptcha -->
-                <!-- <div class="g-recaptcha" data-theme="dark" style="width: 268px;"
-                                    data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div> -->
-              </div>
-              <div class="form_group text_right">
-                <button type="submit" class="primary_btn" id="form_submit">SUBMIT <span class="loader"></span>
-                </button>
-              </div>
+            <div class="form_group">
+              <span id="captcha-validation" class="white_text" style="display:none">Please check this box to continue.</span>
+              <div class="g-recaptcha" data-sitekey="6LfKXSEqAAAAAH-86de3Vsw4oS29-z7TCD-02b3s"></div>
             </div>
-            <div class="thank_you" id="msg">Thank you! We appreciate your input and will get back to you
-              soon.</div>
+
+            <div class="form_group text_right">
+              <button type="submit" class="primary_btn" id="form_submit">SUBMIT</button>
+            </div>
           </form>
         </div>
       </div>
@@ -135,35 +131,18 @@
   <script src="assets/js/gsap.min.js"></script>
   <!-- Scroll Me -->
   <script src="assets/js/jquery.scrollme.min.js"></script>
-  <!-- Google Captcha -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
   <!-- axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js" async></script>
+
   <script>
-    $('#contact_form').on('submit', function (e) {
-      e.preventDefault();
-      $('.contact_form input, .contact_form textarea,.contact_form select').val('');
-      $('.contact_form .primary_btn .loader').addClass('active');
-      axios
-        .post("https://submit-form.com/wAKhGyqX", {
-          // message: "Thank you",
-        })
-        .then(function (response) {
-          // console.log(response);
-          $('#msg').addClass('active');
-          $('.contact_form .primary_btn .loader').removeClass('active');
+    $('#contact-form').on('submit', function (e) {
+      const captchaResponse = grecaptcha.getResponse();
 
-          setTimeout(function () {
-            $('#msg').removeClass('active');
-          }, 5000)
-
-        })
-        .catch(function (response) {
-          // console.error(response);
-        });
+      if (captchaResponse.length === 0) {
+        e.preventDefault();
+        $("#captcha-validation").show();
+      }
     })
-
   </script>
 
   <!-- Main -->
